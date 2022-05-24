@@ -19,7 +19,7 @@ top.maxWindowIframe = document.getElementById('max-iframe');
 top.maxWindowIframeBackground = document.getElementById('max-iframe-background');
 top.iframeContainer = document.getElementById('iframe-container');
 top.resizeArticleListEle = document.getElementById('resize-list');
-
+top.articleListMaxShrink = 2;
 Date.prototype.formatDate = function (fmt) {
 	let o = {
 		"M+": this.getMonth() + 1, //月份
