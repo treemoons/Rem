@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+:root {
+	--color: black;
+	--selection-backcolor: rgba(128, 0, 128, 0.109);
+	--body-backcolor: rgba(255, 255, 255, 0.9);
+	--backgroundimg-cover-color: transparent;
+	--preloaod-color: white;
+	--icon-color: gray;
+	--header-hover-color: gray;
+	--header-hover-backcolor: rgba(220, 220, 220, 0.4);
+	--header-active-backcolor: rgba(210, 210, 210, 0.5);
+	--snap-backcolor: rgba(255, 255, 255, 0.5);
+	--snap-option-backcolor:rgb(0, 0, 0,0.2);
+	--snap-hover-color:rgb(146, 58, 146, 0.7);
+
+	--nav-color: white;
+	--nav-backcolor: rgb(146, 58, 146, 0.9);
+	--nav-hover-color: rgba(220, 220, 220, 0.624);
+	--nav-hover-backcolor: rgba(105, 35, 105, 0.4);
+	--searching-backcolor: rgba(24, 0, 24, 0.59);
+
+	--article-backcolor: rgba(255, 255, 255, 0.8);
+	--article-color: black;
+	--article-hover-backcolor: rgba(220, 220, 220, 0.4);
+	--article-hover-color: gainsboro;
+	--article-focus-backcolor: rgba(128, 0, 247, 0.05);
+
+	--user-theme-color: rgba(128, 0, 128, 0.7);
+	--user-theme-backcolor: rgba(199, 149, 199, 0.7);
+	--progress-dot-color: purple;
+
+	--border-separate-color: rgba(128, 128, 128, 0.719);
+
+
+	--disabled-color: darkgray;
+	--searching-result-symbol-completed-color: green;
+	--searching-result-symbol-onworking-color: gray;
+	--searching-result-symbol-incompleted-color: red;
+	--piece-bar-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+	--piece-bar-backcolor: rgba(255, 255, 255, 0.9);
+
+	--mark-backcolor: rgba(128, 0, 128, 0.3);
+
+}

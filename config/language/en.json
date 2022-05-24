@@ -1,0 +1,8 @@
+{
+	"$schema": "../scheme/language.json",
+	"innertext": {},
+	"title": {"today":"Today"},
+	"placleholder": {
+		"searching": "Enter after typing keywords"
+	}
+}

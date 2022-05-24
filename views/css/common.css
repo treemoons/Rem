@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import './keyframes.css';
+@import './transition.css';
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	color: var(--color);
+	transition: color 200ms;
+}
+html,
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+body::-webkit-scrollbar {
+	width: 0;
+}
+*::selection{
+	background-color: var(--selection-backcolor);
+}
+:root{
+	--waitring-size: 7px;
+	--waitring-frame-size: 50px;
+	--waitring-border-radius: 50%;
+	--waitring-color: var(--user-theme-color);
+}
+
+mark {
+	background-color: var(--mark-backcolor);
+}
+
+.srcollbar{
+	overflow: scroll;
+	overflow-y: overlay;
+}
+.srcollbar::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+
+.srcollbar::-webkit-scrollbar-track {
+	border-radius: 2px;
+}
+
+.srcollbar::-webkit-scrollbar-thumb {
+	background-color: transparent;
+	/* border-radius: 2px; */
+}
+.srcollbar:hover::-webkit-scrollbar-thumb {
+	background-color: rgba(170, 170, 170, 0.342);
+	border-radius: 5px;
+}
+.srcollbar:focus-within:-webkit-scrollbar-thumb {
+	background-color: rgba(170, 170, 170, 0.342);
+	border-radius: 5px;
+}
+
+
+.srcollbar::-webkit-scrollbar-thumb:hover {
+	background: #747474;
+}
+
+.srcollbar::-webkit-scrollbar-corner {
+	background: transparent;
+}
+[data-lang-innertext]{
+	text-transform: capitalize;
+}

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn" style="width: 100%;">
+
+	<head>
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/keyframes.css">
+	</head>
+
+	<body style="margin-top: 50px;">
+		<div class="waitring-frame">
+			<div class="waitring-bar1">
+				<div class="waitring1 waitrings"></div>
+			</div>
+			<div class="waitring-bar2">
+				<div class="waitring2 waitrings"></div>
+			</div>
+			<div class="waitring-bar3">
+				<div class="waitring3 waitrings"></div>
+			</div>
+			<div class="waitring-bar4">
+				<div class="waitring4 waitrings"></div>
+			</div>
+			<div class="waitring-bar5">
+				<div class="waitring5 waitrings"></div>
+			</div>
+		</div>
+		<div id="changering">
+
+		</div>
+		</div>
+		<span
+			style=" overflow-wrap: break-word;">ile:///D:/treemoons/user/RemDo/views/html/main/preload.html?test=heheile:///D:/treemoons/user/RemDo/views/html/main/preload.html?test=hehe</span>
+		<p style=" word-wrap: break-word;">
+			<script>
+				document.write(location.href);
+				// let color = `rgba(${(100 * Math.random()) + 155},${(100 * Math.random()) + 155},${(100 * Math.random()) + 155},0)`
+				// document.body.style.backgroundColor = color;
+				// console.log(document.body.style.backgroundColor)
+				// .style = `--waitring-size:2px;--waitring-frame-size: 10px;--waitring-color:green`
+	// console.log(color);
+	// document.getElementById('theme').href=location.search.substr(3);
+	// console.log(location.search.sub(3))
+
+			</script>
+			<button>变色</button>
+			<script type="module">
+				import { switchThemeColor, initialProgressRing } from '../../js/main/theme.js';
+				initialProgressRing( document.getElementById('changering'), {
+					dotSize: '2px',
+					frameSize: '10px',
+					dotColor: 'green'
+				})
+
+				document.querySelector('button').onclick = e => switchThemeColor();
+			</script>
+		</p>
+	</body>
+
+</html>

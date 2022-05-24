@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<style>
+		.paperwall-item {
+			display: inline-block;
+		}
+	</style>
+	<script async type="module">
+		let bt = document.getElementById('context-menu');
+		function ceshi() {
+			if (
+				bt.style.display == 'none') {
+
+				bt.style.display = 'block';
+			} else {
+
+				bt.style.display = 'none';
+			}
+
+		}
+		bt.style.display = 'none';
+top.ceshi=ceshi;
+	</script>
+
+	<body>
+		<button style="margin-top: 50px;" onclick="top.ceshi()"> ceshi </button>
+		<p>
+			<script>
+				document.write(location.search);</script>
+		</p>
+		<div id="context-menu" class="background-img-choose context-menu">
+			<div class="pieces-show-down">
+				<div class="pieces-show-down">
+					<div class="paperwall-color1 paperwall-item"><img>测试</div>
+					<div class="paperwall-color2 paperwall-item"><img>测设</div>
+					<div class="paperwall-color3 paperwall-item"><img>测设</div>
+					<div class="paperwall-color4 paperwall-item"><img>测设</div>
+				</div>
+				<div class="pieces-show-down">
+					<div class="paperwall-img paperwall-item"><img src="" alt="">测设</div>
+					<div class="paperwall-img paperwall-item"><img src="" alt="">测设</div>
+					<div class="paperwall-img paperwall-item"><img src="" alt="">测设</div>
+					<div class="paperwall-img paperwall-item"><img src="" alt="">测设</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

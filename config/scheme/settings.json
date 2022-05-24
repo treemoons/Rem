@@ -1,0 +1,160 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"properties": {
+		"regular-settings": {
+			"type": "object",
+			"description": "常规设置选项",
+			"properties": {
+				"language": {
+					"type": "string",
+					"enum": [
+						"us",
+						"zh-cn"
+					],
+					"default": "zh-cn"
+				},
+				"add-top": {
+					"type": "boolean",
+					"description": "任务添加到顶部"
+				},
+				"delete-warning": {
+					"type": "boolean",
+					"description": "删除之前确认提示"
+				},
+				"overtiming-warning": {
+					"type": "boolean",
+					"description": "即将过期的任务醒目标记"
+				},
+				"overtiming-color-records": {
+					"type": "object",
+					"description": "醒目的颜色记录",
+					"properties": {
+						"light": {
+							"type": "object",
+							"overtiming-color": {
+								"type": "string",
+								"description": "选中的醒目颜色"
+							},
+							"overtiming-color-record": {
+								"type": "array",
+								"description": "选过颜色的记录，最多三条",
+								"maxItems": 3,
+								"format": "color"
+							}
+						},
+						"dark": {
+							"type": "object",
+							"overtiming-color": {
+								"type": "string",
+								"description": "选中的醒目颜色"
+							},
+							"overtiming-color-record": {
+								"type": "array",
+								"description": "选过颜色的记录，最多三条",
+								"maxItems": 3,
+								"format": "color"
+							}
+						}
+					},
+					"auto-recycle-paragraph": {
+						"type": "boolean",
+						"description": "自动添加未完成的任务,循环添加已过期的任务到“我的一天”，直到完成。否则将做过期处理，直接标记归档，无法再次处理。若想重新完成，可为任务做追加，但过期标记仍存在。"
+					},
+					"draft-saving": {
+						"type": "boolean",
+						"description": "自动保存未完成的新建任务，在草稿箱中查看，若没有开启删除前确认提示，将直接废弃，没有任何提示。"
+					},
+					"hidden-shown-acticle": {
+						"type": "boolean",
+						"description": "隐藏已经设置在侧边栏的系统功能"
+					}
+				}
+			},
+			"theme-settings": {
+				"required": [
+					"theme"
+				],
+				"type": "object",
+				"description": "主题设置",
+				"properties": {
+					"theme": {
+						"description": "主题设置",
+						"type": "string",
+						"enum": [
+							"light",
+							"dark",
+							"auto"
+						],
+						"default": "light"
+					},
+					"default-background-img": {
+						"description": "默认背景图片地址",
+						"type": "string",
+						"format": "uri-reference"
+					},
+					"default-background-user-added": {
+						"type": "array",
+						"description": "用户选择过的默认壁纸的地址",
+						"format": "uri-reference"
+					},
+					"article-background": {
+						"type": "object",
+						"description": "用户自定义的分类的背景",
+						"items": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "string"
+							}
+						]
+					}
+				}
+			},
+			"tray-settings": {
+				"type": "object",
+				"description": "托盘设置",
+				"properties": {
+					"background-running": {
+						"type": "boolean",
+						"description": "关闭按钮是否是后台运行。"
+					}
+				}
+			},
+			"nav-icon": {
+				"type": "object",
+				"description": "系统内置的分类状态栏显示",
+				"properties": {
+					"today": {
+						"type": "boolean"
+					},
+					"starred": {
+						"type": "boolean"
+					},
+					"email": {
+						"type": "boolean"
+					},
+					"draft": {
+						"type": "boolean"
+					},
+					"planed": {
+						"type": "boolean"
+					},
+					"archive": {
+						"type": "boolean"
+					}
+				}
+			},
+			"article-list": {
+				"description": "Article列表的设置",
+				"type": "object",
+				"properties": {
+					"list-width": {
+						"type": "number",
+						"description": "整个列表的宽度"
+					}
+				}
+			}
+		}
+	}
+}

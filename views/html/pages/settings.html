@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Cache-Control" content="">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SETTINGS</title>
+		<!-- <link rel="stylesheet" href="../../css/maxiframe-container.css"> -->
+		<script src="../../js/pages/settings.js" type="module"></script>
+	</head>
+
+	<body>
+		<header class="settings-header">
+			<h1><span data-id="settings">设置</span></h1>
+		</header>
+		<main>
+			<aside> </aside>
+			<aside class="settings-options srcollbar">
+				<!-- account -->
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3>账号信息</h3>
+						<div class="settings-option  ">
+							<div class="settings-account">
+								<div class="account-icon-info">
+									<div class="account-icon">
+										<i>
+											<img src="../../../src/img/man.png" alt="" width="100" border="1">
+										</i>
+									</div>
+									<div class="account-name-email">
+										<div class="account-name">LIN PENG</div>
+										<div class="account-email">TREEMOONS@OUTLOK.COM</div>
+									</div>
+								</div>
+								<div class="account-management-logout">
+									<script>
+										function test(){
+											open('./email.html','_self');
+											top.historyMaxIframeCount++;
+										}
+									</script>
+									<div role="button" class="account-management" onclick="test()">管理账号</div>
+									<div role="button" class="account-logout">退出账号</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--常规 -->
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3>常规</h3>
+						<div class="settings-option  ">
+							<div>
+								<ul class="regular-settings">
+									<li title="任务添加到顶部">
+										<div class="check-label">
+											<!-- <span>⚑</span> -->
+											<span>任务添加到顶部</span>
+										</div><input id="add-top" type="checkbox">
+										<label class="check-slider" for="add-top"></label>
+									</li>
+									<li title="删除之前确认提示">
+										<div class="check-label">
+											<!-- <span>☰</span> -->
+											<span>删除之前确认提示</span>
+										</div><input id="delete-warning" type="checkbox">
+										<label class="check-slider " for="delete-warning"></label>
+									</li>
+
+									<li title="过期提示">
+										<div class="check-label">
+											<!-- <span>⚑</span> -->
+											<span>即将过期的任务醒目标记</span>
+										</div><input id="overtiming-warning" type="checkbox"><label class="check-slider" for="overtiming-warning"></label>
+										<div id="overtiming-color-records">
+										<div class="overtiming"><input type="color" id="overtiming-color" value="#550777"
+												tips="tishi"><label for="overtiming-color">即将过期</label></div>
+
+											<h6>选择记录</h6>
+											<div class="overtiming-color-record">
+												<div></div>
+												<div></div>
+												<div></div>
+											</div>
+										</div>
+									</li>
+									<li title="循环添加已过期的任务到“我的一天”，直到完成。否则将做过期处理，直接标记归档，无法再次处理。若想重新完成，可为任务做追加，但过期标记仍存在。">
+										<div class="check-label">
+											<!-- <span>⚑</span> -->
+											<span>自动添加未完成的任务</span>
+										</div><input id="auto-recycle-paragraph" type="checkbox">
+										<label class="check-slider" for="auto-recycle-paragraph"></label>
+									</li>
+
+									<li title="自动保存未完成的新建任务，在草稿箱中查看，若没有开启删除前确认提示，将直接废弃，没有任何提示。">
+										<div class="check-label">
+											<!-- <span>⚑</span> -->
+											<span>自动保存未完成的新建任务</span>
+										</div><input id="draft-saving" type="checkbox">
+										<label class="check-slider" for="draft-saving"></label>
+									</li>
+
+									<li title="隐藏已经添加到导航栏的系统分类">
+										<div class="check-label">
+											<!-- <span>⚑</span> -->
+											<span>隐藏已经添加到导航栏的标签</span>
+										</div><input id="hidden-article" type="checkbox">
+										<label class="check-slider" for="hidden-article"></label>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- aside bar -->
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3>状态栏列显示</h3>
+						<div class="settings-option  ">
+							<div>
+								<ul class="nav-list-display">
+									<li class="readonly" title="所有标签">
+										<div class="check-label"><span>☰</span>
+											<span>菜单列表</span>
+										</div><input id="menu" checked disabled type="checkbox">
+										<label class="check-slider readonly" for="menu"></label>
+									</li>
+									<li class="search readonly">
+										<div class="check-label"><i><span style="visibility: hidden;">☰</span></i>
+											<span>搜索</span>
+										</div><input id="search" checked disabled type="checkbox">
+										<label class="check-slider readonly" for="search"></label>
+									</li>
+									<li class="readonly" title="新添到‘我的一天’">
+										<div class="check-label"><span>✚</span>
+											<span>快速新增</span>
+										</div><input id="new-article" checked disabled type="checkbox">
+										<label class="check-slider readonly" for="new-article"></label>
+									</li>
+
+									<li title="我的一天">
+										<div class="check-label"><span>☀</span>
+											<span>我的一天</span>
+										</div><input id="today" type="checkbox">
+										<label class="check-slider" for="today"></label>
+									</li>
+									<li title="标星记录">
+										<div class="check-label"><span>★</span>
+											<span>标星记录</span>
+										</div><input id="starred" checked type="checkbox">
+										<label class="check-slider" for="starred"></label>
+									</li>
+										<!-- extra -->
+									<li title="计划">
+										<div class="check-label"><span>🗃</span>
+											<span>草稿箱</span>
+										</div><input id="draft" type="checkbox">
+										<label class="check-slider" for="draft"></label>
+									</li>
+
+									<li title="计划">
+										<div class="check-label"><span>⚑</span>
+											<span>计划任务</span>
+										</div><input id="planed" type="checkbox">
+										<label class="check-slider" for="planed"></label>
+									</li>
+
+									<li title="所有档案">
+										<div class="check-label"><span>☳</span>
+											<span>所有档案</span>
+										</div><input id="archive" type="checkbox">
+										<label class="check-slider" for="archive"></label>
+									</li>
+
+									<li title="邮件传送">
+										<div class="check-label"><span>✉</span>
+											<span>发送邮件</span>
+										</div><input id="email" checked type="checkbox">
+										<label class="check-slider" for="email"></label>
+									</li>
+
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3>通知</h3>
+						<div class="settings-option  ">
+							<div>
+								<ul class="notify">
+									<li title="">
+										<div class="check-label">
+											<!-- <span></span> -->
+											<span>提醒音</span>
+										</div><input id="warning-sound" type="checkbox">
+										<label class="check-slider" for="warning-sound"></label>
+									</li>
+									<li title="">
+										<div class="check-label">
+											<!-- <span></span> -->
+											<span>通知栏提醒</span>
+										</div><input id="notify-warning" type="checkbox">
+										<label class="check-slider" for="notify-warning"></label>
+									</li>
+									<li title="">
+										<div class="check-label">
+											<!-- <span></span> -->
+											<span>托盘提醒</span>
+										</div><input id="tray-warning" type="checkbox">
+										<label class="check-slider" for="tray-warning"></label>
+									</li>
+									<li title="">
+										<div class="check-label">
+											<!-- <span></span> -->
+											<span>关闭时后台运行</span>
+										</div><input id="background-runing" type="checkbox">
+										<label class="check-slider" for="background-runing"></label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3>同步与导出</h3>
+						<div class="settings-option  ">
+							<div>选项</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- theme -->
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3>主题设置</h3>
+						<h4>主题色</h4>
+						<div class="settings-option  ">
+							<div class="theme-selection">
+								<div><input type="radio" class="light-theme-radio" name="theme" id="light"><label
+										for="light">浅色主题</label></div>
+								<div><input type="radio" class="dark-theme-radio" name="theme" id="dark"><label for="dark">深色主题</label>
+								</div>
+								<div><input type="radio" class="light-theme-radio" checked name="theme" id="system"><label
+										for="system">使用系统主题</label></div>
+							</div>
+						</div>
+					</div>
+					<h4>默认壁纸</h4>
+					<div class="paperwall">
+						<!-- <input type="file" name="" id=""> -->
+						<div>
+							<div class="tips-title">系统内置</div>
+							<span class="paperwall-color paperwall-color1"><img></span>
+							<span class="paperwall-color paperwall-color2"><img></span>
+							<span class="paperwall-color paperwall-color3"><img></span>
+							<span class="paperwall-img" checked><img src="../../../src/img/rainbow.jpg" width="40" alt=""></span>
+						</div>
+						<div class="tips-title">自定义</div>
+						<div class="user-backimg">
+							<span class="paperwall-img">
+								<img src="../../../src/img/man.png" width="40" alt=""><i></i>
+							</span>
+							<span role="button" title="添加自定义壁纸" class="user-add-paperwall"><i></i></span>
+						</div>
+					</div>
+				</div>
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3></h3>
+						<div class="settings-option  ">
+							<div>选项</div>
+						</div>
+					</div>
+				</div>
+				<div class="settings-section">
+					<div class="settings-title  ">
+						<h3></h3>
+						<div class="settings-option  ">
+							<div>选项</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<aside></aside>
+		</main>
+
+	</body>
+
+</html>

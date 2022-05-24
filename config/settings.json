@@ -1,0 +1,57 @@
+{
+  "$schema": "./scheme/settings.json",
+  "theme-settings": {
+    "theme": "auto",
+    "default-background-img": "e:/treemoons/Pictures/Saved Pictures/buou.jpeg",
+    "default-background-user-added": [
+      "e:/treemoons/Pictures/Saved Pictures/OIP.jpg",
+      "e:/treemoons/Pictures/Saved Pictures/psc.jpg"
+    ],
+    "article-background": {
+      "article1-id": "rgb(0,0,0,150)",
+      "article2-id": "rgb(0,0,0,150)"
+    }
+  },
+  "nav-icon": {
+    "today": true,
+    "archive": false,
+    "starred": false,
+    "email": true,
+    "planed": false,
+    "draft": false,
+    "HiddenArticle": true
+  },
+  "regular-settings": {
+    "language": "zh-cn",
+    "add-top": true,
+    "delete-warning": true,
+    "draft-saving": true,
+    "overtiming-warning": true,
+    "overtiming-color-records": {
+      "dark": {
+        "overtiming-color": "#811313",
+        "overtiming-color-record": [
+          "#811313",
+          "#b14e4e",
+          "#d6d6d6"
+        ]
+      },
+      "light": {
+        "overtiming-color": "#000000",
+        "overtiming-color-record": [
+          "#7c4b6f",
+          "#682c52",
+          "#000000"
+        ]
+      }
+    },
+    "auto-recycle-paragraph": false,
+    "hidden-shown-acticle": true
+  },
+  "tray-settings": {
+    "background-running": true
+  },
+  "article-list": {
+    "list-width": 0
+  }
+}

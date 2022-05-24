@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"title": "国际语言注释",
+	"description": "国际语言注释,用于编辑其他语言",
+	"properties": {
+		"innertext": {
+			"description": "用于HTML中标签的innerText文本",
+			"type": "object",
+			"properties": {}
+		},
+		"title": {
+			"description": "用于HTML标签中的title属性",
+			"type": "object",
+			"properties": {}
+		},
+		"placleholder": {
+			"description": "用input中的placeholder显示",
+			"type": "object",
+			"properties": {
+				"searching": {
+					"type": "string"
+				}
+			}
+		},
+		"value":{
+			"type":"object",
+			"properties": {}
+		}
+	}
+}

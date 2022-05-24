@@ -1,0 +1,7 @@
+{
+	"path-autocomplete.pathMappings": {
+		".\\":"${folder}"
+	},
+	"editor.fontFamily": "Cascadia Code light,Consola,幼圆",
+	"livePreview.defaultPreviewPath": "/views/html/main/index.html"
+}

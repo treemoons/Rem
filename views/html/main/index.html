@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link id="theme" rel="stylesheet" href="../../css/theme/light.css">
+		<link rel="stylesheet" href="../../css/index.css">
+		<script src="../../js/main/renderer.js" type="module"></script>
+	</head>
+
+	<body>
+
+		<div id="preload">
+			<div>
+				<h1>⛱</h1>
+				<div>
+					<div class="waitring-frame">
+						<div class="waitring-bar1">
+							<div class="waitring1 waitrings"></div>
+						</div>
+						<div class="waitring-bar2">
+							<div class="waitring2 waitrings"></div>
+						</div>
+						<div class="waitring-bar3">
+							<div class="waitring3 waitrings"></div>
+						</div>
+						<div class="waitring-bar4">
+							<div class="waitring4 waitrings"></div>
+						</div>
+						<div class="waitring-bar5">
+							<div class="waitring5 waitrings"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header id="title">
+			<nav class="header-title">
+				<div class="header-menu">
+					<div class="goback"></div>
+				</div>
+				<div class="title-and-button">
+					<div class="title">
+						<span class="objtitle">添加</span>
+						<span class="connect-symbol">-</span>
+						<span class="subtitle">草稿</span>
+					</div>
+					<div class="header-system-button">
+						<div role="button" class="btn-min"><i></i></div>
+						<div role="button" id="btn-max" class="btn-unmax"><i></i></div>
+						<div role="button" class="btn-close"><i></i></div>
+					</div>
+				</div>
+			</nav>
+			<div id="snap" class="snap pieces-show-down">
+				<div class="snap-border">
+					<div class="snap-left">
+					<div class="snap-left-hover"></div>
+					<div class="snap-position1"></div>
+					<div class="snap-position3"></div>
+				</div>
+					<div class="snap-right">
+					<div class="snap-right-hover"></div>
+					<div class="snap-position2"></div>
+					<div class="snap-position4"></div>
+				</div>
+				</div>
+			</div>
+			<div class="header-waiting">
+				<div class="move">
+					<div class="bar">
+						<div class="dot1"></div>
+						<div class="dot2"></div>
+						<div class="dot3"></div>
+						<div class="dot4"></div>
+						<div class="dot5"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="max-iframe-background">
+			<div class="background-img-cover"></div>
+			<iframe id="max-iframe" class="max-iframe" src="" frameborder="0" scrollingx="no"></iframe>
+		</div>
+		<div id="container">
+			<nav class="nav-list">
+				<h5></h5>
+				<ul class="top-list">
+					<li readonly id="article-list-icon" data-lang-title="menus" title="所有标签">☰</li>
+					<li readonly id="search"><i><span style="visibility: hidden;">🔍</span></i>
+						<div class="searching">
+							<input data-lang-placeholder="searching" type="search" placeholder="输入关键词后回车" name="search" id="searching">
+							<div>
+								<!-- search record of keyworks -->
+							</div>
+						</div>
+					</li>
+					<li readonly id="new-article" title="新添到‘我的一天’">✚</li>
+					<li data-lang-title="today"	 	id="today"	 title="我的一天">☀</li>
+					<li data-lang-title="starred" id="starred" title="标星记录">★</li>
+					<li data-lang-title="draft"  	id="draft" 	 title="草稿箱">🗃</li>
+					<li data-lang-title="planed" 	id="planed"  title="计划任务">⚑</li>
+					<li data-lang-title="archive" id="archive" title="归档">☳</li>
+					<li data-lang-title="email"  	id="email" 	 title="邮件传送">✉</li>
+				</ul>
+				<ul class="bottom-list">
+					<li id="synchronize" data-lang-title="synchronize" title="同步"><i><span style="visibility: hidden;">↺</span> </i> </li>
+					<li id="settings" data-lang-title="settings" title="设置">⛯</li>
+				</ul>
+			</nav>
+			<nav id="article-lists" class="article-lists">
+				<!-- <div> -->
+				<h5 data-lang-innertext="label">标签</h5>
+				<div class="article-list" >
+					<ul class="article-system-list">
+						<li nav-id="today"><div><span>☀</span><span  data-lang-innertext="today">我的一天</span></div> </li>
+						<li nav-id="starred"><div><span>★</span><span data-lang-innertext="starred">标星任务</span></div> </li>
+						<li nav-id="draft"><div><span>🗃</span><span data-lang-innertext="draft">草稿箱</span></div> </li>
+						<li nav-id="planed"><div><span>⚑</span><span data-lang-innertext="planed">计划任务</span></div> </li>
+						<li nav-id="archive"><div><span>☳</span><span data-lang-innertext="archive">档案</span></div> </li>
+						<li nav-id="email"><div><span>✉</span><span data-lang-innertext="email">邮箱功能</span></div> </li>
+					</ul>
+					<ul id="article-user-list" class="article-user-list srcollbar">
+						<li data-serial="1" class="dropzone">
+							<div draggable="true"  data-serial="1"><span>🔧</span><span>工作内容</span></div>
+						</li>
+						<li data-serial="2" class="dropzone">
+							<div draggable="true"  data-serial="2"><span>🛒</span><span>购物清单</span></div>
+						</li>
+						<li data-serial="3" class="dropzone">
+							<div draggable="true"  data-serial="3"><span>📅</span><span>代办事项</span></div>
+						</li>
+						<li data-serial="4" class="dropzone">
+							<div draggable="true"  data-serial="4"><span>❄️</span><span>天气计划</span></div>
+						</li>
+						<li data-serial="5" class="dropzone">
+							<div draggable="true"  data-serial="5"><span>📑</span><span>记录事件</span></div>
+						</li>
+						<li data-serial="6" class="dropzone">
+							<div draggable="true"  data-serial="6"><span>💪</span><span>6hippopotoa</span></div>
+						</li>
+						<li data-serial="7" class="dropzone">
+							<div draggable="true"  data-serial="7"><span>💪</span><span>7hippopotoa</span></div>
+						</li>
+						<li data-serial="8" class="dropzone">
+							<div draggable="true"  data-serial="8"><span>💪</span><span>8hippopotoa</span></div>
+						</li>
+						<li data-serial="9" class="dropzone">
+							<div draggable="true"  data-serial="9"><span>💪</span><span>9hippopotoa</span></div>
+						</li>
+				</div>
+				<!-- </div> -->
+				<!-- <div class="resize-list"></div> -->
+			</nav>
+			<div class="article-content">
+				<div id="resize-list" class="resize-list"></div>
+				<iframe id="iframe-container" class="iframe-content show-display"
+					src="../pages/new-article.html?a=../../css/themde/dark.css" frameborder="0" scrollingx="no"
+					allowtransparency="yes"></iframe>
+			</div>
+
+		</div>
+		<div class="background-img">
+			<div class="background-img-cover"></div>
+			<img id="backimg" src="" alt="">
+		</div>
+		<div class="background-img">
+			<div class="background-img-cover"></div>
+		</div>
+		<!-- <iframe id="preload" src="./preload.html"  frameborder="0"></iframe> -->
+		<!-- <iframe id="title" src="./component/title.html" frameborder="0" scrolling='no'></iframe> -->
+		<!-- <iframe id="container" src="./pags/content.html" frameborder="0" scrolling='no'></iframe> -->
+		<div id="article-list-context-menu context-menu" style="display: none;">
+			<!--style="display: none;-->
+			<div>
+				<ul>
+					<li class="pieces-show-down"><span></span><span></span></li>
+					<li class="pieces-show-down"><span></span><span></span></li>
+					<li class="pieces-show-down"><span></span><span></span></li>
+					<li class="pieces-show-down"><span></span><span></span></li>
+					<li class="pieces-show-down"><span></span><span></span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="background-img-choose context-menu">
+			<div class="pieces-show-down">
+				<div class="pieces-show-down">
+					<div class="paperwall-color1 paperwall-item"><img></div>
+					<div class="paperwall-color2 paperwall-item"><img></div>
+					<div class="paperwall-color3 paperwall-item"><img></div>
+					<div class="paperwall-color4 paperwall-item"><img></div>
+				</div>
+				<div class="pieces-show-down">
+					<div class="paperwall-img paperwall-item"><img src="" alt=""></div>
+					<div class="paperwall-img paperwall-item"><img src="" alt=""></div>
+					<div class="paperwall-img paperwall-item"><img src="" alt=""></div>
+					<div class="paperwall-img paperwall-item"><img src="" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

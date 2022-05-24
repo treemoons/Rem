@@ -1,0 +1,11 @@
+.pieces-show-up {
+	animation: pieces-show-up 0.3s ease-out 0s 1;
+}.pieces-show-down {
+	animation: pieces-show-down 0.3s ease-out 0s 1;
+}
+.show-display{
+	animation: show-display,slider-up 0.25s,0.3s ease,ease-in-out 0s,0s 1;
+}
+.hidden-display{
+	animation: hidden-display,slider-down 0.2s,0.3s ease,ease-in-out 0s,0s 1;
+}
