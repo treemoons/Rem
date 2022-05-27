@@ -17,6 +17,7 @@ function createWindow() {
 			contextIsolation: false
 		}
 	});
+	// win.unmaximize();
 	win.minimize();
 	win.menuBarVisible = false;
 	require('./controllers/listening')(win);

@@ -44,28 +44,31 @@ function listening(win) {
 			addOnListening(win, 'app');
 
 			// show main window
-			setTimeout(() => {
-				// win.show();
+			setTimeout(async () => {
+				//	await
+				win.show();
 				win.unmaximize();
 				//启动参数传递前台
-				let startArgvs = {};
-				let count = 0;
+
+				let startArgvs = { count: 0 };
 				process.argv.forEach(v => {
-					v.match(/--([^-]+)-([^=]+)=(.+)/gi);
-					let key = RegExp.$2;
-					console.log(key)
-					let value = RegExp.$3;
-					if (v.startsWith('--rendererArgv-')) {
-						startArgvs[key] = value == "true" || "false" ? value == "true" ? true : false : value;
-						startArgvs['count'] = ++count;
-					} else {
-						// start app
+					let matched = /--([^-]+)-([^=]+)=(.+)/gi.exec(v) || [];
+					let key = matched[2];
+					if (!key) return;
+					//console.log(key)
+					let value = matched[3];
+					//	console.log(`key:${key}; value:${value};`);
+					let agrvs = {};
+					agrvs[key] = value == "true" ? true : value == 'false' ? false : value;
+					if (!startArgvs[matched[1]])
+						startArgvs[matched[1]] = agrvs;
+					else {
+						startArgvs[matched[1]][key] = agrvs[key];
 					}
+
 				});
-				if (startArgvs['count']) {
-					e.reply('initiled-successed', startArgvs);
-				} else
-					e.reply('initiled-successed');
+				console.log(startArgvs)
+				e.reply('initiled-successed', startArgvs);
 				initialed = true;
 			}, 300);
 		})

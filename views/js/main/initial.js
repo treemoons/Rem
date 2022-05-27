@@ -117,7 +117,6 @@ top.maxWindowIframe.onload = function (e) {
 		}, 300);
 	}
 }
-
 // start initialing
 top.ipcRenderer.send('get-settings');
 top.ipcRenderer.send('initial-article-list');
