@@ -14,8 +14,11 @@
   ],
   "author": "treemoons",
   "license": "ISC",
-  "description": "this is a applicantion which can help us remember to do things that we planted.It also can alarm us what we lost to do. ",
+  "description": "this is a applicantion which can help us remember to do things that we planed. It also can warn us of what we lost to do. ",
   "devDependencies": {
     "electron": "^19.0.0"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.8"
   }
 }

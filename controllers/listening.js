@@ -53,6 +53,7 @@ function listening(win) {
 				let startArgvs = { count: 0 };
 				process.argv.forEach(v => {
 					let matched = /--([^-]+)-([^=]+)=(.+)/gi.exec(v) || [];
+					let argvs = matched[1];
 					let key = matched[2];
 					if (!key) return;
 					//console.log(key)
@@ -60,10 +61,10 @@ function listening(win) {
 					//	console.log(`key:${key}; value:${value};`);
 					let agrvs = {};
 					agrvs[key] = value == "true" ? true : value == 'false' ? false : value;
-					if (!startArgvs[matched[1]])
-						startArgvs[matched[1]] = agrvs;
+					if (!startArgvs[argvs])
+						startArgvs[argvs] = agrvs;
 					else {
-						startArgvs[matched[1]][key] = agrvs[key];
+						startArgvs[argvs][key] = agrvs[key];
 					}
 
 				});
